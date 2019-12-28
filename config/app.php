@@ -86,5 +86,6 @@ return [
         'Structure/taxonomies.php',
         'Structure/shortcodes.php',
         'Structure/thumbnails.php',
+        'Structure/ACF/settings.php',
     ],
 ];

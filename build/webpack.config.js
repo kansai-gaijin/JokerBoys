@@ -18,6 +18,7 @@ const javascriptRule = require('./rules/javascript')
 const externalFontsRule = require('./rules/external.fonts')
 const externalImagesRule = require('./rules/external.images')
 
+
 const config = require('./app.config')
 
 module.exports = {
@@ -82,7 +83,13 @@ module.exports = {
       javascriptRule,
       externalFontsRule,
       externalImagesRule,
-    ]
+      {
+        loader: "webpack-modernizr-loader",
+        test: /\.modernizrrc\.js$/
+        // Uncomment this when you use `JSON` format for configuration
+        // type: 'javascript/auto'
+      }
+    ],
   },
 
   /**

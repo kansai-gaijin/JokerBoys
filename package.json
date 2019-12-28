@@ -10,7 +10,10 @@
     "lint:sass": "stylelint resources/assets/sass/**/*.{scss,sass}",
     "lint": "npm run lint:js && npm run lint:sass"
   },
-  "dependencies": {},
+  "dependencies": {
+    "imports-loader": "^0.8.0",
+    "modernizr": "^3.8.0"
+  },
   "devDependencies": {
     "autoprefixer": "^6.7.7",
     "babel-core": "^6.24.1",
@@ -26,6 +29,7 @@
     "eslint": "^4.10.0",
     "eslint-loader": "^1.9.0",
     "eslint-plugin-vue": "^4.7.1",
+    "exports-loader": "^0.7.0",
     "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^0.11.1",
     "imagemin-webpack-plugin": "^1.4.4",
@@ -38,6 +42,7 @@
     "stylelint-webpack-plugin": "^0.7.0",
     "webpack": "^3.0.0",
     "webpack-dev-server": "^2.4.4",
-    "webpack-merge": "^4.1.0"
+    "webpack-merge": "^4.1.0",
+    "webpack-modernizr-loader": "^5.0.0"
   }
 }

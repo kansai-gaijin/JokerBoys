@@ -1,6 +1,7 @@
 const path = require('path')
 const merge = require('webpack-merge')
 
+
 const env = require('./utils/env')
 const config = require('../config/app')
 
@@ -78,7 +79,8 @@ module.exports = merge({
    */
   resolve: {
     alias: {
-      'vue$': 'vue/dist/vue.esm.js'
+      'vue$': 'vue/dist/vue.esm.js',
+      'modernizr$': path.resolve(__dirname, "./.modernizrrc.js")
     }
   },
 
