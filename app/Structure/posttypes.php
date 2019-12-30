@@ -16,32 +16,63 @@ namespace JokerB\Theme\App\Structure;
 use function JokerB\Theme\App\config;
 
 /**
- * Registers `book` custom post type.
+ * Registers `cast` custom post type.
  *
  * @return void
  */
-function register_book_post_type()
+function register_cast_post_type()
 {
-    register_post_type('book', [
-        'description' => __('Collection of books.', config('textdomain')),
+    register_post_type('cast', [
+        'description' => __('キャストのコレクション', config('textdomain')),
         'public' => true,
         'supports' => ['title', 'editor', 'excerpt', 'thumbnail'],
         'labels' => [
-            'name' => _x('Books', 'post type general name', config('textdomain')),
-            'singular_name' => _x('Book', 'post type singular name', config('textdomain')),
-            'menu_name' => _x('Books', 'admin menu', config('textdomain')),
-            'name_admin_bar' => _x('Book', 'add new on admin bar', config('textdomain')),
-            'add_new' => _x('Add New', 'book', config('textdomain')),
-            'add_new_item' => __('Add New Book', config('textdomain')),
-            'new_item' => __('New Book', config('textdomain')),
-            'edit_item' => __('Edit Book', config('textdomain')),
-            'view_item' => __('View Book', config('textdomain')),
-            'all_items' => __('All Books', config('textdomain')),
-            'search_items' => __('Search Books', config('textdomain')),
-            'parent_item_colon' => __('Parent Books:', config('textdomain')),
-            'not_found' => __('No books found.', config('textdomain')),
-            'not_found_in_trash' => __('No books found in Trash.', config('textdomain')),
+            'name' => _x('キャスト管理', 'post type general name', config('textdomain')),
+            'singular_name' => _x('キャスト', 'post type singular name', config('textdomain')),
+            'menu_name' => _x('キャスト管理', 'admin menu', config('textdomain')),
+            'name_admin_bar' => _x('キャスト管理', 'add new on admin bar', config('textdomain')),
+            'add_new' => _x('キャスト追加', 'cast', config('textdomain')),
+            'add_new_item' => __('キャスト追加', config('textdomain')),
+            'new_item' => __('キャスト追加', config('textdomain')),
+            'edit_item' => __('キャスト編集', config('textdomain')),
+            'view_item' => __('キャストを表示', config('textdomain')),
+            'all_items' => __('キャスト一覧', config('textdomain')),
+            'search_items' => __('キャスト検索', config('textdomain')),
+            'parent_item_colon' => __('親キャスト:', config('textdomain')),
+            'not_found' => __('キャスト見つかりません。', config('textdomain')),
+            'not_found_in_trash' => __('ゴミ箱にキャストいません。', config('textdomain')),
         ],
     ]);
 }
-add_action('init', 'JokerB\Theme\App\Structure\register_book_post_type');
+add_action('init', 'JokerB\Theme\App\Structure\register_cast_post_type');
+
+/**
+ * Registers `cast-blog` custom post type.
+ *
+ * @return void
+ */
+function register_cast_blog_post_type()
+{
+    register_post_type('cast-blog', [
+        'description' => __('キャストブログコレクション', config('textdomain')),
+        'public' => true,
+        'supports' => ['title', 'editor', 'excerpt', 'thumbnail'],
+        'labels' => [
+            'name' => _x('キャストブログ', 'post type general name', config('textdomain')),
+            'singular_name' => _x('投稿', 'post type singular name', config('textdomain')),
+            'menu_name' => _x('キャストブログ管理', 'admin menu', config('textdomain')),
+            'name_admin_bar' => _x('キャストブログ管理', 'add new on admin bar', config('textdomain')),
+            'add_new' => _x('新規', 'cast-blog', config('textdomain')),
+            'add_new_item' => __('新規投稿', config('textdomain')),
+            'new_item' => __('新規投稿', config('textdomain')),
+            'edit_item' => __('投稿編集', config('textdomain')),
+            'view_item' => __('投稿を表示', config('textdomain')),
+            'all_items' => __('投稿一覧', config('textdomain')),
+            'search_items' => __('投稿検索', config('textdomain')),
+            'parent_item_colon' => __('親投稿:', config('textdomain')),
+            'not_found' => __('投稿見つかりません。', config('textdomain')),
+            'not_found_in_trash' => __('ゴミ箱に投稿ありません。', config('textdomain')),
+        ],
+    ]);
+}
+add_action('init', 'JokerB\Theme\App\Structure\register_cast_blog_post_type');

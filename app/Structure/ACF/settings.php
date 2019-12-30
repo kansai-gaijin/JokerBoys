@@ -1,6 +1,6 @@
 <?php
 
-namespace Tonik\Theme\App\Structure\ACF;
+namespace JokerB\Theme\App\Structure\ACF;
 
 use function JokerB\Theme\App\config;
 

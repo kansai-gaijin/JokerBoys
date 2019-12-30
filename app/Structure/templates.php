@@ -73,3 +73,18 @@ function render_documentation_button()
     echo do_shortcode("[button href='https://github.com/tonik/tonik']Checkout documentation →[/button]");
 }
 add_action('theme/header/end', 'JokerB\Theme\App\Structure\render_documentation_button');
+
+function render_box_meta($fields){
+    
+    foreach($fields as $field){
+        $field_type = $field['field_type'];
+        template(
+            'metaboxes/' . $field_type, 
+            array(
+                'field_data' => $field
+            )
+        );
+    }
+
+}
+add_action('theme/custommeta/fields', 'JokerB\Theme\App\Structure\render_box_meta');
