@@ -24,4 +24,4 @@
     </ul>
     <a href="#" class="button jb_upload_gallery_button">+</a>
 </div>
-<input id="<?= $slug; ?>" type="hidden" name="<?= $slug; ?>" value="<?= join(',',$hidden); ?>" />
+<input id="<?= $field_data['slug']; ?>" type="hidden" name="<?= $field_data['slug']; ?>" value="<?= join(',',$hidden); ?>" />
