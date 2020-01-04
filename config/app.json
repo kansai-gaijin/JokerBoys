@@ -2,8 +2,11 @@
   "assets": {
     "app": [
       "./resources/assets/js/app.js",
-      "./resources/assets/js/admin-scripts.js",
       "./resources/assets/sass/app.scss"
+    ],
+    "admin": [
+      "./resources/assets/sass/admin.scss",
+      "./resources/assets/js/admin-scripts.js"
     ]
   }
 }

@@ -1,0 +1,91 @@
+.jb-field-gallery{
+  border-top:5px solid #DDD;
+  border-bottom:5px solid #DDD;
+  padding:10px 0;
+}
+.jb-field-gallery label{
+  font-size:18px;
+  font-weight:bold;
+  width:100%;
+  clear:both;
+}
+.jb-field-gallery ul{
+  margin:0;
+  padding:0;
+}
+.jb-field-gallery ul::after{
+  content:"";
+  display:block;
+  clear:both;
+}
+.jb-field-gallery ul li{
+  display:block;
+  height:100px;
+  width:100px;
+  position:relative;
+  margin-right:5px;
+  float:left;
+  margin-bottom: 0px;
+}
+.jb-field-gallery ul li span{
+  position:relative;
+  height:100px;
+  width:100px;
+  background-size:cover;
+  display:block;
+}
+.jb-field-gallery ul li a{
+  position:absolute;
+  top:0;
+  left:0;
+  height:100%;
+  width:100%;
+  background-color:rgba(0,0,0,0.7);
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  color:white;
+  text-decoration: none;
+  font-size:40px;
+  font-weight:bold;
+  opacity:0;
+  transition:all 0.28s ease-in-out;
+}
+.jb-field-gallery ul li:hover a{
+  opacity:1;
+}
+.jb-gallery-wrapper{
+  display:flex;
+  align-items:center;
+  margin:10px 0 0 0;
+}
+a.jb-upload-gallery-button{
+  display:flex;
+  height:100px;
+  width:100px;
+  justify-content: center;
+  align-items: center;
+  background-color:#EEE;
+  border-radius:5px;
+  font-weight:bold;
+  text-decoration: none;
+  font-size:30px;
+  color:black;
+  transition:all 0.28s ease-in-out;
+}
+a.jb-upload-gallery-button:hover{
+  background-color:#AAA;
+  color:white;
+}
+.jb-field-text label{
+  display:block;
+  font-size:16px;
+  line-height:28px;
+  font-weight:bold;
+}
+.jb-field-text input{
+  width:100%;
+  padding:0 5px;
+  font-size:16px;
+  margin:0;
+}

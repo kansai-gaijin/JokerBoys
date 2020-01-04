@@ -63,3 +63,16 @@ function jokerb_add_meta_boxes()
     }
 }
 add_action('add_meta_boxes', 'JokerB\Theme\App\Structure\jokerb_add_meta_boxes');
+
+function jokerb_save_meta_data($post_id){
+  if (array_key_exists('jbf', $_POST)):
+    foreach($_POST['jbf'] as $key=>$val):
+      update_post_meta(
+        $post_id,
+        $key,
+        $val
+      );
+    endforeach;
+  endif;
+}
+add_action('save_post', 'JokerB\Theme\App\Structure\jokerb_save_meta_data');

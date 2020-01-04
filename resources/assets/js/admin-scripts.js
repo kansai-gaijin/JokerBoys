@@ -12,7 +12,7 @@ jQuery(function ($) {
   /*
   * Sortable images
   */
-  $('ul.jb_gallery_list').sortable({
+  $('ul.jb-gallery-list').sortable({
     items: 'li',
     cursor: '-webkit-grabbing', /* mouse cursor */
     scrollSensitivity: 40,
@@ -33,18 +33,18 @@ jQuery(function ($) {
         sort.push($(this).attr('data-id'));
       });
       /* add the array value to the hidden input field */
-      gallery.parent().next().val(sort.join());
+      gallery.parent().parent().next().val(sort.join());
       /* console.log(sort); */
     }
   });
   /*
   * Multiple images uploader
   */
-  $('.jb_upload_gallery_button').click(function (e) { /* on button click*/
+  $('.jb-upload-gallery-button').click(function (e) { /* on button click*/
     e.preventDefault();
 
     var button = $(this),
-      hiddenfield = button.prev(),
+      hiddenfield = button.parent().parent().next(),
       hiddenfieldvalue = hiddenfield.val().split(","), /* the array of added image IDs */
       custom_uploader = wp.media({
         title: 'Insert images', /* popup title */
@@ -67,7 +67,7 @@ jQuery(function ($) {
           if (!in_array(attachments[i].id, hiddenfieldvalue)) {
 
             /* add HTML element with an image */
-            $('ul.jb_gallery_list').append('<li data-id="' + attachments[i].id + '"><span style="background-image:url(' + attachments[i].attributes.url + ')"></span><a href="#" class="misha_gallery_remove">×</a></li>');
+            $('ul.jb-gallery-list').append('<li data-id="' + attachments[i].id + '"><span style="background-image:url(' + attachments[i].attributes.url + ')"></span><a href="#" class="jb-gallery-remove">×</a></li>');
             /* add an image ID to the array of all images */
             hiddenfieldvalue.push(attachments[i].id);
           } else {
@@ -75,7 +75,7 @@ jQuery(function ($) {
           }
         }
         /* refresh sortable */
-        $("ul.jb_gallery_list").sortable("refresh");
+        $("ul.jb-gallery-list").sortable("refresh");
         /* add the IDs to the hidden field value */
         hiddenfield.val(hiddenfieldvalue.join());
         /* you can print a message for users if you want to let you know about the same images */
@@ -86,10 +86,10 @@ jQuery(function ($) {
   /*
   * Remove certain images
   */
-  $('body').on('click', '.misha_gallery_remove', function () {
+  $('body').on('click', '.jb-gallery-remove', function () {
     var id = $(this).parent().attr('data-id'),
       gallery = $(this).parent().parent(),
-      hiddenfield = gallery.parent().next(),
+      hiddenfield = gallery.next(),
       hiddenfieldvalue = hiddenfield.val().split(","),
       i = hiddenfieldvalue.indexOf(id);
 
@@ -111,9 +111,9 @@ jQuery(function ($) {
   /*
   * Selected item
   */
-  $('body').on('mousedown', 'ul.jb_gallery_list li', function () {
+  $('body').on('mousedown', 'ul.jb-gallery-list li', function () {
     var el = $(this);
-    el.parent().find('li').removeClass('misha-active');
-    el.addClass('misha-active');
+    el.parent().find('li').removeClass('jb-gal-active');
+    el.addClass('jb-gal-active');
   });
 });

@@ -1,6 +1,7 @@
 <div class="meta-options jb-field-gallery">
     <label for="<?= $field_data['slug'] ?>"><?= $field_data['name'] ?></label>
-    <ul class="jb_gallery_list">
+    <div class="jb-gallery-wrapper">
+    <ul class="jb-gallery-list">
 <?php
     $hidden = array();
     if( $images = get_posts( array(
@@ -17,11 +18,12 @@
 ?>
                     <li data-id="<?= $image->ID; ?>'">
                         <span style="background-image:url('<?= $image_src[0]; ?>')"></span>
-                        <a href="#" class="misha_gallery_remove">×</a>
+                        <a href="#" class="jb-gallery-remove">×</a>
                     </li>
         <?php endforeach; ?>
 <?php endif; ?>
     </ul>
-    <a href="#" class="button jb_upload_gallery_button">+</a>
+    <a href="#" class="jb-upload-gallery-button">+</a>
+    </div>
 </div>
-<input id="<?= $field_data['slug']; ?>" type="hidden" name="<?= $field_data['slug']; ?>" value="<?= join(',',$hidden); ?>" />
+<input id="<?= $field_data['slug']; ?>" type="hidden" name="<?= 'jbf[' . $field_data['slug'] . ']'; ?>" value="<?= join(',',$hidden); ?>" />

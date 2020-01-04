@@ -48,8 +48,8 @@ function register_admin_scripts() {
 	if ( ! did_action( 'wp_enqueue_media' ) )
     wp_enqueue_media();
     
-    wp_enqueue_script('app', asset_path('js/app.js'), ['jquery'], null, true);
-
+    wp_enqueue_script('app', asset_path('js/admin.js'), ['jquery'], null, true);
+    wp_enqueue_style('app', asset_path('css/admin.css'));
 }
 add_action( 'admin_enqueue_scripts', 'JokerB\Theme\App\Http\register_admin_scripts' );
 
