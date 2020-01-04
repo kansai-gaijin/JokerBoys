@@ -3,6 +3,6 @@
 ?>
 
 <p class="meta-options jb-field-text">
-    <label for="<?= $field_data['slug']; ?>"><?= $field_data['name'] ?><?= ($field_data['required']) ? ' <small class="req">必須</small>' : '' ?></label>
+    <label class="field-title" for="<?= $field_data['slug']; ?>"><?= $field_data['name'] ?><?= ($field_data['required']) ? ' <small class="req">必須</small>' : '' ?></label>
     <input id="<?= $field_data['slug']; ?>" type="text" name="<?= 'jbf[' . $field_data['slug'] . ']'; ?>" value="<?= $value; ?>" placeholder="<?= $field_data['placeholder']; ?>" <?= ($field_data['required']) ? 'required' : '' ?>  />
 </p>

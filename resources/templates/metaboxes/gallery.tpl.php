@@ -3,7 +3,7 @@
 ?>
 
 <div class="meta-options jb-field-gallery">
-    <label for="<?= $field_data['slug'] ?>"><?= $field_data['name'] ?></label>
+    <label class="field-title" for="<?= $field_data['slug'] ?>"><?= $field_data['name'] ?></label>
     <div class="jb-gallery-wrapper">
     <ul class="jb-gallery-list">
 <?php

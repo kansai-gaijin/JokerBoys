@@ -28,17 +28,77 @@ function jokerb_add_meta_boxes()
             post_types => array('cast'),
             fields => array(
                 array(
-                    'name' => 'test name',
-                    'slug' => 'testslug',
+                    'name' => 'test text',
+                    'slug' => 'test-text',
                     'field_type' => 'text',
                     'placeholder' => 'put your text here',
                     'required' => true
                 ),
                 array(
-                    'name' => 'test field',
-                    'slug' => 'testslug2',
-                    'field_type' => 'text',
+                    'name' => 'test email',
+                    'slug' => 'test-email',
+                    'field_type' => 'email',
                     'placeholder' => 'put your text here',
+                ),
+                array(
+                  'name' => 'test url',
+                  'slug' => 'test-url',
+                  'field_type' => 'url',
+                  'placeholder' => 'put your text here',
+                ),
+                array(
+                  'name' => 'test tel',
+                  'slug' => 'test-tel',
+                  'field_type' => 'tel',
+                  'placeholder' => 'put your text here',
+                ),
+                array(
+                  'name' => 'test date',
+                  'slug' => 'test-date',
+                  'field_type' => 'date',
+                  'placeholder' => 'put your text here',
+                ),
+                array(
+                  'name' => 'test multiline',
+                  'slug' => 'test-multiline',
+                  'field_type' => 'multiline',
+                  'placeholder' => 'put your text here',
+                ),
+                array(
+                  'name' => 'test html',
+                  'slug' => 'test-html',
+                  'field_type' => 'html',
+                  'placeholder' => 'put your text here',
+                ),
+                array(
+                  'name' => 'test radio',
+                  'slug' => 'test-radio',
+                  'field_type' => 'radio',
+                  'options' => array(
+                    array(
+                      'name' => 'testval1',
+                      'value' => 1
+                    ),
+                    array(
+                      'name' => 'testval2',
+                      'value' => 2
+                    ),
+                  ),
+                ),
+                array(
+                  'name' => 'test dropdown',
+                  'slug' => 'test-dropdown',
+                  'field_type' => 'dropdown',
+                  'options' => array(
+                    array(
+                      'name' => 'testval1',
+                      'value' => 1
+                    ),
+                    array(
+                      'name' => 'testval2',
+                      'value' => 2
+                    ),
+                  ),
                 ),
                 array(
                     'name' => 'test field 3',
