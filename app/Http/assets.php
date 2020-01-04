@@ -36,6 +36,24 @@ function register_scripts() {
 add_action('wp_enqueue_scripts', 'JokerB\Theme\App\Http\register_scripts');
 
 /**
+ * Registers theme admin script files.
+ *
+ * @return void
+ */
+function register_admin_scripts() {
+  wp_enqueue_script('jquery-ui-core');
+	wp_enqueue_script('jquery-ui-widget');
+	wp_enqueue_script('jquery-ui-sortable');
+ 
+	if ( ! did_action( 'wp_enqueue_media' ) )
+    wp_enqueue_media();
+    
+    wp_enqueue_script('app', asset_path('js/app.js'), ['jquery'], null, true);
+
+}
+add_action( 'admin_enqueue_scripts', 'JokerB\Theme\App\Http\register_admin_scripts' );
+
+/**
  * Registers editor stylesheets.
  *
  * @return void

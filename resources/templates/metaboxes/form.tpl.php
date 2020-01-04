@@ -1,15 +1,4 @@
-<div class="hcf_box">
-    <style scoped>
-        .hcf_box{
-            display: grid;
-            grid-template-columns: max-content 1fr;
-            grid-row-gap: 10px;
-            grid-column-gap: 20px;
-        }
-        .hcf_field{
-            display: contents;
-        }
-    </style>
+<div class="jb-meta-box">
     <?php
         /**
          * Functions hooked into `theme/custommeta/fields` action.

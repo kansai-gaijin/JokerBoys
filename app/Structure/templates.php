@@ -74,6 +74,12 @@ function render_documentation_button()
 }
 add_action('theme/header/end', 'JokerB\Theme\App\Structure\render_documentation_button');
 
+/**
+ * Renders MetaBox fields
+ *
+ * @uses resources/templates/shortcodes/button.tpl.php
+ * @see resources/templates/partials/header.tpl.php
+ */
 function render_box_meta($fields){
     
     foreach($fields as $field){
