@@ -27,84 +27,78 @@ function jokerb_add_meta_boxes()
             slug => "cast_info",
             post_types => array('cast'),
             fields => array(
-                array(
-                    'name' => 'test text',
-                    'slug' => 'test-text',
-                    'field_type' => 'text',
-                    'placeholder' => 'put your text here',
-                    'required' => true
-                ),
-                array(
-                    'name' => 'test email',
-                    'slug' => 'test-email',
-                    'field_type' => 'email',
-                    'placeholder' => 'put your text here',
-                ),
-                array(
-                  'name' => 'test url',
-                  'slug' => 'test-url',
-                  'field_type' => 'url',
-                  'placeholder' => 'put your text here',
-                ),
-                array(
-                  'name' => 'test tel',
-                  'slug' => 'test-tel',
-                  'field_type' => 'tel',
-                  'placeholder' => 'put your text here',
-                ),
-                array(
-                  'name' => 'test date',
-                  'slug' => 'test-date',
-                  'field_type' => 'date',
-                  'placeholder' => 'put your text here',
-                ),
-                array(
-                  'name' => 'test multiline',
-                  'slug' => 'test-multiline',
-                  'field_type' => 'multiline',
-                  'placeholder' => 'put your text here',
-                ),
-                array(
-                  'name' => 'test html',
-                  'slug' => 'test-html',
-                  'field_type' => 'html',
-                  'placeholder' => 'put your text here',
-                ),
-                array(
-                  'name' => 'test radio',
-                  'slug' => 'test-radio',
-                  'field_type' => 'radio',
-                  'options' => array(
-                    array(
-                      'name' => 'testval1',
-                      'value' => 1
-                    ),
-                    array(
-                      'name' => 'testval2',
-                      'value' => 2
-                    ),
+              array(
+                  'name' => '源氏名',
+                  'slug' => 'cast-name',
+                  'field_type' => 'text',
+                  'placeholder' => 'キャストの表示するお名前',
+                  'required' => true
+              ),
+              array(
+                'name' => 'フリガナ',
+                'slug' => 'cast-furigana',
+                'field_type' => 'text',
+                'placeholder' => '源氏名のフリガナ',
+                'required' => false
+              ),
+              array(
+                'name' => '生年月',
+                'slug' => 'cast-birthday',
+                'field_type' => 'date',
+                'placeholder' => 'キャストの誕生日',
+                'required' => true
+              ),
+              array(
+                'name' => '血液型',
+                'slug' => 'cast-bloodtype',
+                'field_type' => 'dropdown',
+                'options' => array(
+                  array(
+                    'name' => 'A型',
+                    'value' => 'A'
+                  ),
+                  array(
+                    'name' => 'B型',
+                    'value' => 'B'
+                  ),
+                  array(
+                    'name' => 'AB型',
+                    'value' => 'AB'
+                  ),
+                  array(
+                    'name' => 'O型',
+                    'value' => 'O'
                   ),
                 ),
-                array(
-                  'name' => 'test dropdown',
-                  'slug' => 'test-dropdown',
-                  'field_type' => 'dropdown',
-                  'options' => array(
-                    array(
-                      'name' => 'testval1',
-                      'value' => 1
-                    ),
-                    array(
-                      'name' => 'testval2',
-                      'value' => 2
-                    ),
-                  ),
-                ),
-                array(
-                    'name' => 'test field 3',
-                    'slug' => 'testslug3',
-                    'field_type' => 'gallery',
-                ),
+              ),
+              array(
+                'name' => '身長',
+                'slug' => 'cast-height',
+                'field_type' => 'number',
+                'placeholder' => 'キャストの身長',
+                'required' => true
+              ),
+              array(
+                'name' => '体重',
+                'slug' => 'cast-weight',
+                'field_type' => 'number',
+                'placeholder' => 'キャストの体重',
+                'required' => true
+              ),
+              array(
+                'name' => '出張可能地域',
+                'slug' => 'cast-area',
+                'field_type' => 'text',
+                'placeholder' => 'キャストの出張可能なエリア',
+                'required' => true
+              ),
+              array(
+                'name' => '出張可能時間',
+                'slug' => 'cast-time',
+                'field_type' => 'text',
+                'placeholder' => 'キャストの出張可能なエリア',
+                'required' => true
+              ),
             )
         ),
     );
