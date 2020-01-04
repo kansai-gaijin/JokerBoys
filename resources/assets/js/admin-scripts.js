@@ -89,17 +89,17 @@ jQuery(function ($) {
   $('body').on('click', '.jb-gallery-remove', function () {
     var id = $(this).parent().attr('data-id'),
       gallery = $(this).parent().parent(),
-      hiddenfield = gallery.next(),
+      hiddenfield = gallery.parent().parent().next(),
       hiddenfieldvalue = hiddenfield.val().split(","),
       i = hiddenfieldvalue.indexOf(id);
-
+    console.log(id);
     $(this).parent().remove();
-
+    console.log(hiddenfieldvalue);
     /* remove certain array element */
     if (i != -1) {
       hiddenfieldvalue.splice(i, 1);
     }
-
+    console.log(hiddenfieldvalue);
     /* add the IDs to the hidden field value */
     hiddenfield.val(hiddenfieldvalue.join());
 

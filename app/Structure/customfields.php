@@ -32,6 +32,7 @@ function jokerb_add_meta_boxes()
                     'slug' => 'testslug',
                     'field_type' => 'text',
                     'placeholder' => 'put your text here',
+                    'required' => true
                 ),
                 array(
                     'name' => 'test field',
